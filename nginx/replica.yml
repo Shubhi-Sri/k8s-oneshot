@@ -1,7 +1,7 @@
-kind: Deployment
+kind: ReplicaSet
 apiVersion: apps/v1
 metadata:
-  name: nginx-deployment
+  name: nginx-replica
   namespace: nginx
 spec:
   replicas: 2
@@ -11,7 +11,7 @@ spec:
 
   template:
     metadata:
-      name: nginx-dep-pod
+      name: nginx-rep-pod
       labels:
         app: nginx
 
